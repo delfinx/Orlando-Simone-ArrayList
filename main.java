@@ -58,13 +58,23 @@ public class main
     //PUNTO 5
     System.out.println("Dalla lista data precedentemente, rimuovi un nome");
     String nomeRimosso = input.nextLine().toLowerCase();
-    for(String parola: nomi){
-        if(nomeRimosso.equals(parola)){
-            nomi.remove(parola);
+
+    String daRimuovere = "";
+    for (String parola : nomi) {
+        if (nomeRimosso.equals(parola)) {
+        daRimuovere = parola;
+        break;
         }
     }
 
-    for(String nome: nomi){
+    if (daRimuovere != null) {
+        nomi.remove(daRimuovere);
+        System.out.println(nomeRimosso + " è stato rimosso.");
+    } else {
+        System.out.println(nomeRimosso + " non è presente nella lista.");
+    }
+
+    for (String nome: nomi) {
         System.out.println(nome);
     }
     
