@@ -14,13 +14,14 @@ public class main
     nomi.add("franci");
     nomi.add("isra");
     nomi.add("bencex");
+    /* 
     for(String nome: nomi){
         System.out.println(nome);
     }
 
     //PUNTO 2
     grandezzaArreyList(nomi);
-    
+    */
     //PUNTO 3
     ArrayList<Integer> numeri = new ArrayList<>();
     numeri.add(1);
@@ -29,6 +30,7 @@ public class main
     numeri.add(4);
     numeri.add(5);
 
+    /* 
     int somma = 0;
     for(int numero: numeri){
         somma += numero;
@@ -77,11 +79,31 @@ public class main
     for (String nome: nomi) {
         System.out.println(nome);
     }
-    
-
+    */
+    //PUNTO 6  
+    /* 
+    invertiNumeri(numeri);
+    for(int numero: numeri){
+        System.out.println(numero);
+    }
+        */
     }
     public static void grandezzaArreyList(ArrayList<String> nomi){
         int grandezza = nomi.size();
         System.out.println("Gli elementi all'interno dell'arreylist sono: " + grandezza);
     }
-}
+
+    //PUNTO 6
+    public static void invertiNumeri(ArrayList<Integer> lista){
+        int variabile = 0;
+        int numero = 0;
+        variabile = lista.size();
+        for(int i = 0; i < variabile; i++) {
+            numero = lista.get(i);
+            lista.add(numero);
+            lista.remove(i);
+        }
+    }
+    
+    }
+
