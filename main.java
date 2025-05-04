@@ -89,12 +89,18 @@ public class main
         */
 
     //PUNTO 7
+    /* 
     numeri.set(1, 4);
     rimuoviDuplicati(numeri);
     for(int numero: numeri){
         System.out.println(numero);
     }
+    */
 
+    ArrayList<Integer> pari = numeriInteri(numeri);
+    for (int n : pari) {
+        System.out.println("Numeri pari: " + n);
+    }
     }
     public static void grandezzaArreyList(ArrayList<String> nomi){
         int grandezza = nomi.size();
@@ -124,6 +130,16 @@ public class main
             }
         }
     }    
+
+    public static ArrayList<Integer> numeriInteri(ArrayList<Integer> lista){
+        ArrayList<Integer> numeri_interi = new ArrayList<>();
+        for(int numeri: lista){
+            if(numeri % 2 == 0){
+                numeri_interi.add(numeri);
+            }
+        }
+        return numeri_interi;
+    }
     
     }
 
