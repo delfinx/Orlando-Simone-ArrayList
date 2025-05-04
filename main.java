@@ -26,7 +26,7 @@ public class main
     ArrayList<Integer> numeri = new ArrayList<>();
     numeri.add(1);
     numeri.add(2);
-    numeri.add(3);
+    numeri.add(6);
     numeri.add(4);
     numeri.add(5);
 
@@ -96,11 +96,22 @@ public class main
         System.out.println(numero);
     }
     */
+    
 
+    //PUNTO 8
+    /* 
     ArrayList<Integer> pari = numeriInteri(numeri);
     for (int n : pari) {
         System.out.println("Numeri pari: " + n);
     }
+    */
+
+    //PUNTO 9
+    ArrayList<Integer> Massimo_e_Minimo = Massimo_Minimo(numeri);
+    for (int n : Massimo_e_Minimo) {
+        System.out.println("Numero massimo: " + n);
+    }
+
     }
     public static void grandezzaArreyList(ArrayList<String> nomi){
         int grandezza = nomi.size();
@@ -119,6 +130,7 @@ public class main
         }
     }
 
+    //PUNTO 7
     public static void rimuoviDuplicati(ArrayList<Integer> lista) {
         for (int i = 0; i < lista.size(); i++) {
             int numeroCorrente = lista.get(i);
@@ -131,6 +143,7 @@ public class main
         }
     }    
 
+    //PUNTO 8
     public static ArrayList<Integer> numeriInteri(ArrayList<Integer> lista){
         ArrayList<Integer> numeri_interi = new ArrayList<>();
         for(int numeri: lista){
@@ -141,5 +154,26 @@ public class main
         return numeri_interi;
     }
     
+    //PUNTO 9
+    public static ArrayList<Integer> Massimo_Minimo(ArrayList<Integer> lista){
+        ArrayList<Integer> numeri_interi = new ArrayList<>();
+        
+        int massimo = 1;
+        int minimo = 1;
+        for(int numero: lista){
+            if(minimo < numero){
+                minimo = numero;
+            }
+            if(massimo > numero){
+                massimo = numero;
+            }
+        }
+
+    numeri_interi.add(massimo);
+    numeri_interi.add(minimo);
+    
+    return numeri_interi;
+
     }
+}
 
