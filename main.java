@@ -87,6 +87,14 @@ public class main
         System.out.println(numero);
     }
         */
+
+    //PUNTO 7
+    numeri.set(1, 4);
+    rimuoviDuplicati(numeri);
+    for(int numero: numeri){
+        System.out.println(numero);
+    }
+
     }
     public static void grandezzaArreyList(ArrayList<String> nomi){
         int grandezza = nomi.size();
@@ -104,6 +112,18 @@ public class main
             lista.remove(i);
         }
     }
+
+    public static void rimuoviDuplicati(ArrayList<Integer> lista) {
+        for (int i = 0; i < lista.size(); i++) {
+            int numeroCorrente = lista.get(i);
+            for (int j = i + 1; j < lista.size(); j++) {
+                if (numeroCorrente == lista.get(j)) {
+                    lista.remove(j);
+                    j--;
+                }
+            }
+        }
+    }    
     
     }
 
